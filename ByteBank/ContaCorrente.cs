@@ -3,12 +3,17 @@
 
 //using _05_ByteBank;
 
-namespace _07_ByteBank
+namespace ByteBank
 {
 
 
     public class ContaCorrente
     {
+        // criando uma propriedade Taxa de Operação, a qual será trabalhada no construtor ContaCorrente
+
+        public static double TaxaOperacao { get; private set; }
+
+        #region
         //o titular agora não é mais uma string, mas sim uma referência de um objeto Cliente
 
         //private Cliente _titular;
@@ -28,18 +33,23 @@ namespace _07_ByteBank
         //}
 
         //Simplificando ainda mais a Propriedade "Cliente"
+        #endregion
 
         public Cliente Titular { get; set; }
 
+        #region
         // 
         // Criando a propriedade TotalDeContasCriadas
         // a palavra "static" informa que essa é uma Propriedade que pertence à classe ContaCorrente, e não dos objetos criados
+        #endregion
+
         public static int TotalDeContasCriadas {  get; private set; }
 
 
-
+        #region
         // public int agencia;
         // public int numero;
+        #endregion
 
         private int _agencia;
         public int Agencia
@@ -68,7 +78,7 @@ namespace _07_ByteBank
 
         private double _saldo = 100;
 
-
+        #region
 
 
         //// os métodos a seguir "DefinirSaldo" e "ObterSaldo" são um encapsulamento, pois manipulam um estado interno dentro da classe
@@ -95,6 +105,8 @@ namespace _07_ByteBank
 
         // simplificando os métodos "DefinirSaldo" e "ObterSaldo"
         // construindo a Propriedade "Saldo"
+        #endregion
+
         public double Saldo
         {
             get
@@ -113,25 +125,41 @@ namespace _07_ByteBank
             }
         }
 
+        #region
         // Construtor-01
         // informando que temos uma forma de se construir um objeto do tipo "ContaCorrente"
+        #endregion
         public ContaCorrente(int agencia, int numero)
         {
             Agencia = agencia;
             Numero = numero;
 
+            #region
             // incrementando e atribuindo um valor a essa Propriedade
 
             // Se utiliza "ContaCorrente." por ser o que a gente quer acessar, já que é uma característica da classe "ContaCorrente". 
             // Entretanto, como estamos dentro da classe e estamos manipulando um membro estático, isso se torna desnecessário.
             // Mas ficará no código como aprendizado, pra não confundir com "this.", que faz referência a objetos
+
+            #endregion
+
+            #region
+            // testando tratamento de Exceções
+            #endregion
+
+            TaxaOperacao = 30/TotalDeContasCriadas;
+
             ContaCorrente.TotalDeContasCriadas++;
+
+
         }
 
 
-
+        #region
         //criando a função (ou método) Sacar
         // bool representa um tipo que TEM retorno (true ou false)
+        #endregion
+
         public bool Sacar(double valor)
         {
             if (this._saldo < valor)
@@ -139,24 +167,34 @@ namespace _07_ByteBank
                 return false;
             }
 
+            #region
             //o "else" foi retirado dessa lógica para simplificação do código
             //else
             //{
+            #endregion
+
             this._saldo -= valor;
             return true;
+
+            #region
             //}
+            #endregion
         }
 
+        #region
         //criando o método (ou função) Depositar
         // void representa um tipo que NÃO tem retorno
+        #endregion
 
         public void Depositar(double valor)
         {
             this._saldo += valor;
         }
 
+        #region
         //Criando o método Transferir
         //Representando no método vários argumentos do tipo ContaCorrente
+        #endregion
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
@@ -165,7 +203,9 @@ namespace _07_ByteBank
                 return false;
             }
 
+            #region
             //chamando o método Depositar já criado acima, passando como argumento o "valor" do método Tranferir, atuando no objeto "contaDestino"
+            #endregion
 
             this._saldo -= valor;
             contaDestino.Depositar(valor);

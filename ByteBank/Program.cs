@@ -1,11 +1,11 @@
-﻿using _07_ByteBank;
+﻿using ByteBank;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _07_ByteBank
+namespace ByteBank
 {
     internal class Program
     {
@@ -22,11 +22,13 @@ namespace _07_ByteBank
 
             ContaCorrente contaDoBruno = new ContaCorrente(263, 263105);
 
-            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+            Console.WriteLine(ContaCorrente.TaxaOperacao);
 
-            ContaCorrente contaDaGabriela = new ContaCorrente(263, 263020);
+            //Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
 
-            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+            //ContaCorrente contaDaGabriela = new ContaCorrente(263, 263020);
+
+            //Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
 
             Console.ReadLine();
         }
