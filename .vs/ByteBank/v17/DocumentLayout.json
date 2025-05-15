@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Programas\\Aulas\\C#\\Projetos\\Alura\\4-CSharp\\ByteBank\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|C:\\Users\\franc\\OneDrive\\Programas\\Aulas\\C#\\Projetos\\Alura\\4-CSharp\\ByteBank\\bytebank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|c:\\users\\franc\\onedrive\\programas\\aulas\\c#\\projetos\\alura\\4-csharp\\bytebank\\bytebank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|solutionrelative:bytebank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|solutionrelative:bytebank\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|c:\\users\\franc\\onedrive\\programas\\aulas\\c#\\projetos\\alura\\4-csharp\\bytebank\\bytebank\\contacorrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|C:\\Users\\franc\\OneDrive\\Programas\\Aulas\\C#\\Projetos\\Alura\\4-CSharp\\ByteBank\\bytebank\\contacorrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89877096-60B8-42C4-A5D3-A55C3D6D44A7}|ByteBank\\ByteBank.csproj|solutionrelative:bytebank\\contacorrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,8 +46,7 @@
               "RelativeToolTip": "ByteBank\\ContaCorrente.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:34:19.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T02:34:19.195Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "ByteBank\\Cliente.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:34:17.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T02:34:17.401Z"
             },
             {
               "$type": "Document",
@@ -70,7 +68,7 @@
               "RelativeDocumentMoniker": "ByteBank\\Program.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Programas\\Aulas\\C#\\Projetos\\Alura\\4-CSharp\\ByteBank\\ByteBank\\Program.cs",
               "RelativeToolTip": "ByteBank\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAUwCgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T02:23:18.494Z",
               "EditorCaption": ""
