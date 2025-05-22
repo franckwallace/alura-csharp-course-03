@@ -12,26 +12,21 @@ namespace ByteBank
         static void Main(string[] args)
         {
 
-            //// nova forma de se construir um objeto, obedecendo o estabelecido no Construtor-01 na classe ContaCorrente
-            //// ContaCorrente conta = new ContaCorrente(-263, 263105);
+            try
+            {
+                Metodo();
+            }
+
+            catch (System.NullReferenceException erro)
+            {
+                Console.WriteLine(erro.Message);
+                Console.WriteLine(erro.StackTrace);
+
+                Console.WriteLine("Exceção tratada!");
+
+            }
 
 
-            //// Console.WriteLine(conta.Agencia);
-            //// Console.WriteLine(conta.Numero);
-
-            //Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
-
-            //ContaCorrente contaDoBruno = new ContaCorrente(263, 263105);
-
-            //Console.WriteLine(ContaCorrente.TaxaOperacao);
-
-            ////Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
-
-            ////ContaCorrente contaDaGabriela = new ContaCorrente(263, 263020);
-
-            ////Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
-
-            Metodo();
 
             Console.ReadLine();
         }
@@ -40,19 +35,38 @@ namespace ByteBank
         //Metodo -> TestaDivisao -> Dividir
         private static void Metodo()
         {
-            //TestaDivisao(0);
-            TestaDivisao(2);
+            TestaDivisao(0);
         }
 
         private static void TestaDivisao(int divisor)
         {
-            int resultado = Dividir(10, divisor);
+            try
+            {
+                Dividir(10, divisor);
 
-            Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é " + resultado );
+
+            }
+
+
+            catch (System.DivideByZeroException excecao)
+            {
+                Console.WriteLine(excecao.Message);
+                Console.WriteLine(excecao.StackTrace);
+
+                Console.WriteLine("Exceção tratada!");
+            }
+
+            // int resultado = Dividir(10, divisor);
+
+            // Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é " + resultado );
         }
 
-        private static int Dividir (int numero, int divisor)
+        private static int Dividir(int numero, int divisor)
         {
+            ContaCorrente conta = null;
+            //Console.WriteLine(conta.Saldo);
+
+
             return numero / divisor;
         }
 
