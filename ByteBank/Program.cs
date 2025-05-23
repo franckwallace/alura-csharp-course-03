@@ -17,18 +17,23 @@ namespace ByteBank
                 Metodo();
             }
 
-            catch (System.NullReferenceException erro)
+            catch (DivideByZeroException)
             {
-                Console.WriteLine(erro.Message);
-                Console.WriteLine(erro.StackTrace);
-
-                Console.WriteLine("Exceção tratada!");
-
+                Console.WriteLine("Exceção 'divisão por zero' tratada!");
             }
 
 
+            catch (Exception erro)
+            {
+                Console.WriteLine(erro.Message);
+                //Console.WriteLine(erro.StackTrace);
+
+                Console.WriteLine("Exceção genérica tratada!");
+
+            }
 
             Console.ReadLine();
+
         }
 
         // Teste com a cadeia em chamars;
@@ -40,32 +45,16 @@ namespace ByteBank
 
         private static void TestaDivisao(int divisor)
         {
-            try
-            {
-                Dividir(10, divisor);
+
+            Dividir(10, divisor);
 
 
-            }
-
-
-            catch (System.DivideByZeroException excecao)
-            {
-                Console.WriteLine(excecao.Message);
-                Console.WriteLine(excecao.StackTrace);
-
-                Console.WriteLine("Exceção tratada!");
-            }
-
-            // int resultado = Dividir(10, divisor);
-
-            // Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é " + resultado );
         }
 
         private static int Dividir(int numero, int divisor)
         {
             ContaCorrente conta = null;
-            //Console.WriteLine(conta.Saldo);
-
+            Console.WriteLine(conta.Saldo);
 
             return numero / divisor;
         }

@@ -44,9 +44,10 @@
               "RelativeDocumentMoniker": "ByteBank\\ContaCorrente.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Programas\\Aulas\\C#\\Projetos\\Alura\\4-CSharp\\ByteBank\\ByteBank\\ContaCorrente.cs",
               "RelativeToolTip": "ByteBank\\ContaCorrente.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:34:19.195Z"
+              "WhenOpened": "2025-05-13T02:34:19.195Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,7 +59,8 @@
               "RelativeToolTip": "ByteBank\\Cliente.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:34:17.401Z"
+              "WhenOpened": "2025-05-13T02:34:17.401Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,7 +70,7 @@
               "RelativeDocumentMoniker": "ByteBank\\Program.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Programas\\Aulas\\C#\\Projetos\\Alura\\4-CSharp\\ByteBank\\ByteBank\\Program.cs",
               "RelativeToolTip": "ByteBank\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T02:23:18.494Z",
               "EditorCaption": ""
