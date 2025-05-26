@@ -43,7 +43,7 @@ namespace ByteBank
         // a palavra "static" informa que essa é uma Propriedade que pertence à classe ContaCorrente, e não dos objetos criados
         #endregion
 
-        public static int TotalDeContasCriadas {  get; private set; }
+        public static int TotalDeContasCriadas { get; private set; }
 
 
         #region
@@ -51,29 +51,9 @@ namespace ByteBank
         // public int numero;
         #endregion
 
-        private int _agencia;
-        public int Agencia
-        {
-            get
-            {
-                return _agencia;
-            }
 
-            set
-            {
-                if (value <= 0)
-                {
-                    return;
-                }
-
-                _agencia = value;
-
-            }
-
-        }
-
-
-        public int Numero { get; set; }
+        public int Agencia { get; }
+        public int Numero { get; }
 
 
         private double _saldo = 100;
@@ -131,6 +111,21 @@ namespace ByteBank
         #endregion
         public ContaCorrente(int agencia, int numero)
         {
+            // Adicionando verificação dos valores das variáveis 'agencia' e 'numero'
+
+            if (agencia <= 0)
+            {
+
+
+                throw new System.ArgumentException("O argumento 'agencia' deve ser maior que 0. ", nameof(agencia));
+            }
+
+            if (numero <= 0)
+            {
+                throw new System.ArgumentException("O argumento 'numero' deve ser maior que 0. ", nameof(numero));
+            }
+
+
             Agencia = agencia;
             Numero = numero;
 
@@ -147,7 +142,7 @@ namespace ByteBank
             // testando tratamento de Exceções
             #endregion
 
-            TaxaOperacao = 30/TotalDeContasCriadas;
+            TaxaOperacao = 30 / TotalDeContasCriadas;
 
             ContaCorrente.TotalDeContasCriadas++;
 

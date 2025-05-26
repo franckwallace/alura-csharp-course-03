@@ -11,11 +11,22 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-
             try
             {
-                Metodo();
+                ContaCorrente conta = new ContaCorrente(1234, 0);
             }
+
+            catch (ArgumentException ex)  
+            {
+                Console.WriteLine("Argumento com problema: " + ex.ParamName);
+                Console.WriteLine("Ocorreu uma exceção do tipo 'ArgumentException'");
+                Console.WriteLine(ex.Message);
+            }
+
+            //try
+            //{
+            //    Metodo();
+            //}
 
             catch (DivideByZeroException)
             {
@@ -23,10 +34,10 @@ namespace ByteBank
             }
 
 
-            catch (Exception erro)
+            catch (Exception e)
             {
-                Console.WriteLine(erro.Message);
-                //Console.WriteLine(erro.StackTrace);
+                Console.WriteLine(e.Message);
+                //Console.WriteLine(e.StackTrace);
 
                 Console.WriteLine("Exceção genérica tratada!");
 
@@ -53,10 +64,22 @@ namespace ByteBank
 
         private static int Dividir(int numero, int divisor)
         {
-            ContaCorrente conta = null;
-            Console.WriteLine(conta.Saldo);
+            try
+            {
+                return numero / divisor;
+            }
 
-            return numero / divisor;
+            catch
+            {
+                Console.WriteLine("Exceção com o número '" + numero + "' e com o divisor '" + divisor + "'");
+                throw;
+            }
+
+
+            //ContaCorrente conta = null;
+            //Console.WriteLine(conta.Saldo);
+
+
         }
 
     }
