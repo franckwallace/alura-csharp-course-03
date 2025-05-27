@@ -142,10 +142,9 @@ namespace ByteBank
             // testando tratamento de Exceções
             #endregion
 
-            TaxaOperacao = 30 / TotalDeContasCriadas;
-
             ContaCorrente.TotalDeContasCriadas++;
 
+            TaxaOperacao = 30 / TotalDeContasCriadas;
 
         }
 
@@ -155,11 +154,19 @@ namespace ByteBank
         // bool representa um tipo que TEM retorno (true ou false)
         #endregion
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
+            if (valor < 0)
+            {
+                throw new System.ArgumentException("O valor de saque não pode ser negativo", nameof(valor));
+            }
+
+
             if (this._saldo < valor)
             {
-                return false;
+                //return false;
+
+                throw new SaldoInsuficienteException(_saldo, valor);
             }
 
             #region
@@ -169,7 +176,7 @@ namespace ByteBank
             #endregion
 
             this._saldo -= valor;
-            return true;
+            //return true;
 
             #region
             //}
@@ -191,20 +198,30 @@ namespace ByteBank
         //Representando no método vários argumentos do tipo ContaCorrente
         #endregion
 
-        public bool Transferir(double valor, ContaCorrente contaDestino)
+        public void Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (this._saldo < valor)
+            if (valor < 0)
             {
-                return false;
+                throw new System.ArgumentException("O valor de transferência não pode ser negativo", nameof(valor));
             }
+
+            #region
+            //if (this._saldo < valor)
+            //{
+            //    //return false;
+            //}
 
             #region
             //chamando o método Depositar já criado acima, passando como argumento o "valor" do método Tranferir, atuando no objeto "contaDestino"
             #endregion
 
-            this._saldo -= valor;
+            //this._saldo -= valor;
+            #endregion
+
+            Sacar(valor);
+
             contaDestino.Depositar(valor);
-            return true;
+            //return true;
         }
 
 
