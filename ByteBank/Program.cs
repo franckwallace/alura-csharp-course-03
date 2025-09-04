@@ -16,7 +16,7 @@ namespace ByteBank
                 ContaCorrente conta = new ContaCorrente(1234, 645678);
                 ContaCorrente conta2 = new ContaCorrente(0001, 999988);
 
-                conta2.Transferir(8, conta);
+                conta2.Transferir(-8888, conta);
 
                 conta.Depositar(13);
                 Console.WriteLine(conta.Saldo);
